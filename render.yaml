@@ -1,0 +1,7 @@
+services:
+    - type: web
+    name: separador-10-stems
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --timeout 600 --workers 1
+    plan: free
